@@ -1,3 +1,2 @@
-<p>
-  photos works!
-</p>
+<app-image-list [images]="photos || []" (clicked)="onClick($event)"></app-image-list>
+<app-lazy-loader *ngIf="!isLastPage" (intersected)="onLoad()"></app-lazy-loader>

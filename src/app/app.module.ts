@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FavoritesModule } from './favorites/favorites.module';
 import { PhotosModule } from './photos/photos.module';
+import { PhotosService } from './shared/services/photos.service';
 import { SharedModule } from './shared/shared.module';
 
 @NgModule({
@@ -17,6 +18,9 @@ import { SharedModule } from './shared/shared.module';
     PhotosModule,
     FavoritesModule,
     SharedModule,
+  ],
+  providers: [
+    PhotosService,
   ],
   bootstrap: [AppComponent],
 })
