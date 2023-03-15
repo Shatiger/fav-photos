@@ -1,0 +1,12 @@
+<mat-toolbar class="header" color="primary">
+  <ng-container *ngFor="let item of items">
+    <button
+      mat-button
+      [routerLink]="item.link"
+      routerLinkActive
+      #rla="routerLinkActive"
+      [routerLinkActiveOptions]="{ exact: true }"
+      [color]="rla.isActive ? 'accent' : 'basic'"
+    >{{ item.title }}</button>
+  </ng-container>
+</mat-toolbar>
