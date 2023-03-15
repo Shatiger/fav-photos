@@ -30,7 +30,6 @@ export class PhotosService {
     
     return source.pipe(
       delay(randomResponseTime()),
-      tap(console.log)
     );
   }
 

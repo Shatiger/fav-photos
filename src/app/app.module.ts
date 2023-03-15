@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FavoritesModule } from './favorites/favorites.module';
 import { PhotosModule } from './photos/photos.module';
+import { FavoritesService } from './shared/services/favorites.service';
 import { PhotosService } from './shared/services/photos.service';
 import { SharedModule } from './shared/shared.module';
 
@@ -21,6 +22,7 @@ import { SharedModule } from './shared/shared.module';
   ],
   providers: [
     PhotosService,
+    FavoritesService,
   ],
   bootstrap: [AppComponent],
 })

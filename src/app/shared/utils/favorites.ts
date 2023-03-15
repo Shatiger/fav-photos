@@ -8,3 +8,7 @@ export function addToFavorites(id: number): void {
 
   localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(unique));
 }
+
+export function getFavorites(): number[] {
+  return JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY) || '[]');
+}

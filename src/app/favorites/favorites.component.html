@@ -1,3 +1,7 @@
-<p>
-  favorites works!
-</p>
+<ng-container *ngIf="photos$ | async as photos; else loading">
+  <app-image-list [images]="photos" (clicked)="onClick($event)"></app-image-list>
+</ng-container>
+
+<ng-template #loading>
+  <mat-spinner></mat-spinner>
+</ng-template>
