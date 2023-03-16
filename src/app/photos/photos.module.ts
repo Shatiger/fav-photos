@@ -4,8 +4,9 @@ import { PhotosComponent } from './photos.component';
 import { PhotoComponent } from './photo/photo.component';
 import { SharedModule } from '../shared/shared.module';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
-import { MatSnackBarModule, MAT_SNACK_BAR_DEFAULT_OPTIONS } from '@angular/material/snack-bar';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatButtonModule } from '@angular/material/button';
 
 @NgModule({
   imports: [
@@ -14,6 +15,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     MatProgressSpinnerModule,
     MatSnackBarModule,
     BrowserAnimationsModule,
+    MatButtonModule,
   ],
   declarations: [PhotosComponent, PhotoComponent],
   exports: [PhotosComponent, PhotoComponent],

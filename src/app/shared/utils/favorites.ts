@@ -12,3 +12,9 @@ export function addToFavorites(id: number): void {
 export function getFavorites(): number[] {
   return JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY) || '[]');
 }
+
+export function removeFromFavorites(id: number) {
+  const entries: number[] = JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY) || '[]');
+  const filtered = entries.filter(value => value !== id);
+  localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(filtered));
+}

@@ -1,3 +1,6 @@
-<p>
-  photo works!
-</p>
+<ng-container *ngIf="photo">
+  <app-image-detail [image]="photo"></app-image-detail>
+  <div class="bottom">
+    <button mat-raised-button color="warn" (click)="onRemove(photo)">Remove from favorites</button>
+  </div>
+</ng-container>

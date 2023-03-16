@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { FavoritesComponent } from './favorites/favorites.component';
 import { PhotoComponent } from './photos/photo/photo.component';
 import { PhotosComponent } from './photos/photos.component';
+import { PhotoResolver } from './shared/guards/photo.resolver';
 
 const routes: Routes = [
   {
@@ -22,6 +23,9 @@ const routes: Routes = [
           {
             path: ':id',
             component: PhotoComponent,
+            resolve: {
+              photo: PhotoResolver,
+            },
           },
           {
             path: '',

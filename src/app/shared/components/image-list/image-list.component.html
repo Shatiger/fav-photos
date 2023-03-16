@@ -1,7 +1,11 @@
-<div *ngIf="images.length > 0" class="images">
+<div *ngIf="images.length > 0; else empty" class="images">
   <ng-container *ngFor="let image of images; trackBy: imageById">
     <div class="image" (click)="clicked.emit(image)">
-      <img [src]="image.url" alt="">
+      <img [src]="image.url" [alt]="'Image #' + image.id">
     </div>
   </ng-container>
 </div>
+
+<ng-template #empty>
+  <span>No images</span>
+</ng-template>

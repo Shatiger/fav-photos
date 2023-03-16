@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Observable, of } from 'rxjs';
+import { Observable, of, throwError } from 'rxjs';
 import { Image, ImageList } from '../interfaces/image.interface';
 import { delay, tap } from 'rxjs/operators';
 import { PAGE_ITEMS_COUNT, TOTAL_ITEMS_COUNT } from '../constants/photos';
@@ -34,9 +34,17 @@ export class PhotosService {
   }
 
   getPhoto$(id: number): Observable<Image> {
+    if (id > TOTAL_ITEMS_COUNT - 1) {
+      return throwError(() => {
+        return new Error('There is no such id');
+      }).pipe(
+        delay(randomResponseTime()),
+      );
+    }
+
     const source = of({
       id,
-      url: `/assets/images/${id}.png`,
+      url: `/assets/images/${id}.jpg`,
     })
 
     return source.pipe(

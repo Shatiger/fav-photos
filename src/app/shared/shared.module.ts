@@ -8,6 +8,7 @@ import { RouterModule } from '@angular/router';
 import { ImageListComponent } from './components/image-list/image-list.component';
 import { LazyLoaderComponent } from './components/lazy-loader/lazy-loader.component';
 import { IntersectionObserverDirective } from './directives/intersection-observer.directive';
+import { ImageDetailComponent } from './components/image-detail/image-detail.component';
 
 @NgModule({
   imports: [
@@ -21,12 +22,14 @@ import { IntersectionObserverDirective } from './directives/intersection-observe
     HeaderComponent,
     ImageListComponent,
     LazyLoaderComponent,
+    ImageDetailComponent,
     IntersectionObserverDirective,
   ],
   exports: [
     HeaderComponent,
     ImageListComponent,
     LazyLoaderComponent,
+    ImageDetailComponent,
   ]
 })
 export class SharedModule { }
