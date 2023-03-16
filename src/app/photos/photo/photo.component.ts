@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
-import { ActivatedRoute, Data, Params, Router } from '@angular/router';
-import { take } from 'rxjs';
+import { ActivatedRoute, Data, Router } from '@angular/router';
 import { removeFromFavorites } from 'src/app/shared/utils/favorites';
 import { Image } from '../../shared/interfaces/image.interface';
 

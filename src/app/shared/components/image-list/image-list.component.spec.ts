@@ -1,7 +1,4 @@
-/* tslint:disable:no-unused-variable */
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { By } from '@angular/platform-browser';
-import { DebugElement } from '@angular/core';
 
 import { ImageListComponent } from './image-list.component';
 
@@ -24,5 +21,12 @@ describe('ImageListComponent', () => {
 
   it('should create', () => {
     expect(component).toBeTruthy();
+  });
+
+  it('should return id of an Image', () => {
+    expect(component.imageById(0, {
+      id: 0,
+      url: '',
+    })).toEqual(0);
   });
 });
