@@ -7,6 +7,6 @@
       #rla="routerLinkActive"
       [routerLinkActiveOptions]="{ exact: true }"
       [color]="rla.isActive ? 'accent' : 'basic'"
-    >{{ item.title }}</button>
+    >{{ item.title | uppercase }}</button>
   </ng-container>
 </mat-toolbar>
